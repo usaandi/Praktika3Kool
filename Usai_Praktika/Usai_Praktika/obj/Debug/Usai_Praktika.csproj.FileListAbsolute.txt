@@ -9,3 +9,15 @@ C:\Usai\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.cspr
 C:\Usai\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.exe
 C:\Usai\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.pdb
 C:\Usai\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.Usai_11_06_2018AccessDatabase.resources
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\bin\Debug\Usai_Praktika.exe.config
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\bin\Debug\Usai_Praktika.exe
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\bin\Debug\Usai_Praktika.pdb
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.csprojAssemblyReference.cache
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.Form1.resources
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.Properties.Resources.resources
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.Usai_11_06_2018AccessDatabase.resources
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.csproj.GenerateResource.cache
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.csproj.CoreCompileInputs.cache
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.exe
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.pdb
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.UsaiDatagrid.resources

@@ -13,6 +13,7 @@ namespace Usai_Praktika
     public partial class Form1 : Form
     {
         Form F1 = new Usai_11_06_2018AccessDatabase();
+        Form F2 = new UsaiDatagrid();
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,13 @@ namespace Usai_Praktika
             if (F1.Visible == false) F1 = new Usai_11_06_2018AccessDatabase();
             F1.Visible = true;
             F1.Activate();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (F2.Visible == false) F2 = new UsaiDatagrid();
+            F2.Visible = true;
+            F2.Activate();
         }
     }
 }
