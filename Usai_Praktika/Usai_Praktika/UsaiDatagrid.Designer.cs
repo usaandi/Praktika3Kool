@@ -41,6 +41,7 @@
             this.US_autorYearBorn = new System.Windows.Forms.TextBox();
             this.US_dataGridView2 = new System.Windows.Forms.DataGridView();
             this.US_autorTitles = new System.Windows.Forms.Button();
+            this.US_Watch = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.US_dataGridView2)).BeginInit();
@@ -161,11 +162,21 @@
             this.US_autorTitles.UseVisualStyleBackColor = true;
             this.US_autorTitles.Click += new System.EventHandler(this.US_autorTitles_Click);
             // 
+            // US_Watch
+            // 
+            this.US_Watch.AutoSize = true;
+            this.US_Watch.Location = new System.Drawing.Point(333, 57);
+            this.US_Watch.Name = "US_Watch";
+            this.US_Watch.Size = new System.Drawing.Size(13, 13);
+            this.US_Watch.TabIndex = 6;
+            this.US_Watch.Text = "0";
+            // 
             // UsaiDatagrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
+            this.Controls.Add(this.US_Watch);
             this.Controls.Add(this.US_autorTitles);
             this.Controls.Add(this.US_dataGridView2);
             this.Controls.Add(this.US_autorYearBorn);
@@ -174,6 +185,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "UsaiDatagrid";
             this.Text = "UsaiDatagrid";
+            this.Load += new System.EventHandler(this.UsaiDatagrid_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -197,5 +209,6 @@
         private System.Windows.Forms.ToolStripButton US_Delete;
         private System.Windows.Forms.DataGridView US_dataGridView2;
         private System.Windows.Forms.Button US_autorTitles;
+        private System.Windows.Forms.Label US_Watch;
     }
 }

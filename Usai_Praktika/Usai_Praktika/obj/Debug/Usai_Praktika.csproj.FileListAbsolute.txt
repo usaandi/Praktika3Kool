@@ -21,3 +21,5 @@ C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug
 C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.exe
 C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.pdb
 C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.UsaiDatagrid.resources
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.csproj.ResolveComReference.cache
+C:\Users\opilane\Documents\Usai Praktika 3\Usai_Praktika\Usai_Praktika\obj\Debug\Usai_Praktika.UsaiExcel.resources

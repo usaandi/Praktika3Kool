@@ -119,7 +119,7 @@
             // 
             // US_timer
             // 
-            this.US_timer.Location = new System.Drawing.Point(188, 520);
+            this.US_timer.Location = new System.Drawing.Point(197, 520);
             this.US_timer.Name = "US_timer";
             this.US_timer.Size = new System.Drawing.Size(118, 23);
             this.US_timer.TabIndex = 5;

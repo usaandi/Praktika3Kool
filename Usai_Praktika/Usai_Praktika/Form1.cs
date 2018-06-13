@@ -14,6 +14,7 @@ namespace Usai_Praktika
     {
         Form F1 = new Usai_11_06_2018AccessDatabase();
         Form F2 = new UsaiDatagrid();
+        Form F3 = new UsaiExcel();
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +32,13 @@ namespace Usai_Praktika
             if (F2.Visible == false) F2 = new UsaiDatagrid();
             F2.Visible = true;
             F2.Activate();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           if (F3.Visible == false) F3 = new UsaiExcel();
+            F3.Visible = true;
+            F3.Activate();
         }
     }
 }

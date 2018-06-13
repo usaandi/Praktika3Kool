@@ -77,6 +77,7 @@ namespace Usai_Praktika
         private void readDB()
         {
             // read database
+            var watch = Stopwatch.StartNew();
             string query = "SELECT author, [year born] FROM Authors ORDER BY Author";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
@@ -84,6 +85,9 @@ namespace Usai_Praktika
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            watch.Stop();
+            US_Watch.Text = watch.ElapsedMilliseconds.ToString()+"-MS"; 
+            
 
         }
 
@@ -155,6 +159,11 @@ namespace Usai_Praktika
             US_textboxAutor.Text = namefield;
             selectedautor = namefield;
             title();
+        }
+
+        private void UsaiDatagrid_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
