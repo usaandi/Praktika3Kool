@@ -33,12 +33,14 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.US_openDB = new System.Windows.Forms.ToolStripButton();
             this.US_Read = new System.Windows.Forms.ToolStripButton();
+            this.US_SavetoDatabase = new System.Windows.Forms.ToolStripButton();
+            this.US_addtogrupp = new System.Windows.Forms.ToolStripButton();
+            this.U_progessbar = new System.Windows.Forms.ToolStripProgressBar();
             this.US_Tooted = new System.Windows.Forms.ListBox();
             this.US_1count = new System.Windows.Forms.Label();
             this.US_timer = new System.Windows.Forms.Label();
-            this.US_SavetoDatabase = new System.Windows.Forms.ToolStripButton();
-            this.U_progessbar = new System.Windows.Forms.ToolStripProgressBar();
-            this.US_addtogrupp = new System.Windows.Forms.ToolStripButton();
+            this.US_SaveToTootja = new System.Windows.Forms.ToolStripButton();
+            this.US_saveToToode = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,8 @@
             this.US_Read,
             this.US_SavetoDatabase,
             this.US_addtogrupp,
+            this.US_SaveToTootja,
+            this.US_saveToToode,
             this.U_progessbar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -73,12 +77,39 @@
             // US_Read
             // 
             this.US_Read.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.US_Read.Enabled = false;
             this.US_Read.Image = ((System.Drawing.Image)(resources.GetObject("US_Read.Image")));
             this.US_Read.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.US_Read.Name = "US_Read";
             this.US_Read.Size = new System.Drawing.Size(86, 22);
             this.US_Read.Text = "Read hinnakiri";
             this.US_Read.Click += new System.EventHandler(this.US_Read_Click);
+            // 
+            // US_SavetoDatabase
+            // 
+            this.US_SavetoDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.US_SavetoDatabase.Enabled = false;
+            this.US_SavetoDatabase.Image = ((System.Drawing.Image)(resources.GetObject("US_SavetoDatabase.Image")));
+            this.US_SavetoDatabase.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.US_SavetoDatabase.Name = "US_SavetoDatabase";
+            this.US_SavetoDatabase.Size = new System.Drawing.Size(53, 22);
+            this.US_SavetoDatabase.Text = "Save DB";
+            this.US_SavetoDatabase.Click += new System.EventHandler(this.US_SavetoDatabase_Click);
+            // 
+            // US_addtogrupp
+            // 
+            this.US_addtogrupp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.US_addtogrupp.Image = ((System.Drawing.Image)(resources.GetObject("US_addtogrupp.Image")));
+            this.US_addtogrupp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.US_addtogrupp.Name = "US_addtogrupp";
+            this.US_addtogrupp.Size = new System.Drawing.Size(96, 22);
+            this.US_addtogrupp.Text = "Save To gruppid";
+            this.US_addtogrupp.Click += new System.EventHandler(this.US_addtogrupp_Click);
+            // 
+            // U_progessbar
+            // 
+            this.U_progessbar.Name = "U_progessbar";
+            this.U_progessbar.Size = new System.Drawing.Size(100, 22);
             // 
             // US_Tooted
             // 
@@ -104,31 +135,25 @@
             this.US_timer.TabIndex = 16;
             this.US_timer.Text = "0";
             // 
-            // US_SavetoDatabase
+            // US_SaveToTootja
             // 
-            this.US_SavetoDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.US_SavetoDatabase.Enabled = false;
-            this.US_SavetoDatabase.Image = ((System.Drawing.Image)(resources.GetObject("US_SavetoDatabase.Image")));
-            this.US_SavetoDatabase.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.US_SavetoDatabase.Name = "US_SavetoDatabase";
-            this.US_SavetoDatabase.Size = new System.Drawing.Size(53, 22);
-            this.US_SavetoDatabase.Text = "Save DB";
-            this.US_SavetoDatabase.Click += new System.EventHandler(this.US_SavetoDatabase_Click);
+            this.US_SaveToTootja.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.US_SaveToTootja.Image = ((System.Drawing.Image)(resources.GetObject("US_SaveToTootja.Image")));
+            this.US_SaveToTootja.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.US_SaveToTootja.Name = "US_SaveToTootja";
+            this.US_SaveToTootja.Size = new System.Drawing.Size(87, 22);
+            this.US_SaveToTootja.Text = "Save To Tootja";
+            this.US_SaveToTootja.Click += new System.EventHandler(this.US_SaveToTootja_Click);
             // 
-            // U_progessbar
+            // US_saveToToode
             // 
-            this.U_progessbar.Name = "U_progessbar";
-            this.U_progessbar.Size = new System.Drawing.Size(100, 22);
-            // 
-            // US_addtogrupp
-            // 
-            this.US_addtogrupp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.US_addtogrupp.Image = ((System.Drawing.Image)(resources.GetObject("US_addtogrupp.Image")));
-            this.US_addtogrupp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.US_addtogrupp.Name = "US_addtogrupp";
-            this.US_addtogrupp.Size = new System.Drawing.Size(96, 22);
-            this.US_addtogrupp.Text = "Save To gruppid";
-            this.US_addtogrupp.Click += new System.EventHandler(this.US_addtogrupp_Click);
+            this.US_saveToToode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.US_saveToToode.Image = ((System.Drawing.Image)(resources.GetObject("US_saveToToode.Image")));
+            this.US_saveToToode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.US_saveToToode.Name = "US_saveToToode";
+            this.US_saveToToode.Size = new System.Drawing.Size(87, 22);
+            this.US_saveToToode.Text = "Save To Toode";
+            this.US_saveToToode.Click += new System.EventHandler(this.US_saveToToode_Click);
             // 
             // UsaiExcel
             // 
@@ -161,5 +186,7 @@
         private System.Windows.Forms.ToolStripButton US_SavetoDatabase;
         private System.Windows.Forms.ToolStripProgressBar U_progessbar;
         private System.Windows.Forms.ToolStripButton US_addtogrupp;
+        private System.Windows.Forms.ToolStripButton US_SaveToTootja;
+        private System.Windows.Forms.ToolStripButton US_saveToToode;
     }
 }
