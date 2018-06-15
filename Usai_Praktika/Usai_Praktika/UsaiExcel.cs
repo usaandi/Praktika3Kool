@@ -71,7 +71,7 @@ namespace Usai_Praktika
                     arv = 0;
                     U_progessbar.Value = 12;
                     U_progessbar.Maximum = 3000;
-                    for (int rn = 12; rn < 10; rn++)
+                    for (int rn = 12; rn < 3000; rn++)
                     {
                         xlRange = xlWorkSheet.Cells[rn, 4];
                         if (xlRange.Value != null)
@@ -108,8 +108,10 @@ namespace Usai_Praktika
 
         private void UsaiExcel_FormClosing(object sender, FormClosingEventArgs e)
         {
-           // myConnection.Close();
-         
+          myConnection.Close();
+            xlWorkBook.Close(0);
+            xlApp.Quit();
+
         }
 
         private void US_SavetoDatabase_Click(object sender, EventArgs e)
@@ -145,7 +147,7 @@ namespace Usai_Praktika
             command2.ExecuteNonQuery();
 
             query = "INSERT INTO Toode (Tootenimetus, Tootjad_ID, Grupp_ID) " +
-                " SELECT DISTINCT h.Toode, t.Tootjanimetus, g.Grupinimetus" +
+                " SELECT DISTINCT h.Toode, t.Tootja_ID, g.Grupp_ID" +
                 " FROM Hinnakiri_sharp as h, Tootja as t, Grupid as g" +
                 " Where h.Tootja=t.Tootjanimetus AND h.Grupp=g.Grupinimetus" +
                 " AND NOT EXISTS (SELECT * FROM Toode as tt WHERE tt.Tootenimetus = h.Toode )" +
@@ -153,8 +155,19 @@ namespace Usai_Praktika
             OleDbCommand command3 = new OleDbCommand(query, myConnection);
             command3.ExecuteNonQuery();
 
+            xlRange = xlWorkSheet.Cells[3, 4];
+            string nadal = xlRange.Value;
+            query="DELETE FROM Hinnakiri WHERE Nadal='" +nadal+ "';";
+            OleDbCommand command4 = new OleDbCommand(query, myConnection);
+            command4.ExecuteNonQuery();
 
-
+            query = "INSERT INTO Hinnakiri (Toode, Nadal, Hind )" +
+                "SELECT t.Toode, '" + nadal + "',  h.Hind " +
+                "FROM Hinnakiri_sharp AS h, Toode AS t " +
+                "WHERE h.Toode=t.Tootenimetus " +
+                "ORDER BY 1;";
+            OleDbCommand command5 = new OleDbCommand(query, myConnection);
+            command5.ExecuteNonQuery();
         }
 
         private void US_addtogrupp_Click(object sender, EventArgs e)
@@ -241,6 +254,22 @@ namespace Usai_Praktika
                     command1.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void US_päring_Click(object sender, EventArgs e)
+        {
+          
+
+            string query = "SELECT Tootenimetus, h1.Hind AS Esimene, h2.Hind AS Teine, Esimene - Teine AS Vahe " +
+                "FROM Toode, Hinnakiri AS h1, Hinnakiri AS h2 " +
+                "WHERE h1.Nadal = '" +US_nadal1.Text+ "' AND Toode.Toode= h1.Toode " +
+                "AND h2.Nadal= '" +US_nadal2.Text+ "' AND h1.Toode= h2.Toode AND h1.Hind <> h2.Hind;";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+
+            OleDbDataAdapter da = new OleDbDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
